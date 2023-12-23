@@ -1,11 +1,12 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Context from '../../Context/Context';
 
 function PreviewModal(props) {
   const contextData = useContext(Context);
-  const handleClose = () =>contextData.setComposeRecepiantModal(false);
+  const handleClose = () => contextData.setComposeRecepiantModal(false);
+
   return (
     <>
       <Modal
@@ -16,16 +17,16 @@ function PreviewModal(props) {
         scrollable={true}
       >
         <Modal.Header closeButton>
-          <Modal.Title>Preview of Recepiants</Modal.Title>
+          <Modal.Title>Preview of Recipients</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-            <h5>Total Email's : {props.recepaintInfo.total}</h5>
-            <h5>Duplicates : {props.recepaintInfo.duplicates}</h5>
-            <h5>Without Duplicates : {props.recepaintInfo.withoutDuplicates}</h5>
-            <hr />
+          <h5>Total Emails: {props.recepaintInfo.total}</h5>
+          <h5>Duplicates: {props.recepaintInfo.duplicates}</h5>
+          <h5>Without Duplicates: {props.recepaintInfo.withoutDuplicates}</h5>
+          <hr />
           <ol>
-            {props.recepaintInfo.data.map((email,inx)=>{
-                return <li key={`${inx}`}>{email}</li>
+            {props.recepaintInfo.data.map((email, index) => {
+              return <li key={`${index}`}>{email}</li>;
             })}
           </ol>
         </Modal.Body>
@@ -39,4 +40,4 @@ function PreviewModal(props) {
   );
 }
 
-export default PreviewModal
+export default PreviewModal;
