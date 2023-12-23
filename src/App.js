@@ -23,7 +23,7 @@ function App() {
     if (localStorage.getItem("x-Auth-token")) {
       navigate("/")
     }
-  }, []);
+  }, [navigate]);
 
   return (
     <div className="App">
