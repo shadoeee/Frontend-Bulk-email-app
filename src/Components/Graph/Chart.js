@@ -32,7 +32,7 @@ function ChartComp(props) {
       setPlotData({date:date , count: count})
     })
     .catch((err)=>console.log(err))
-  },[contextDate.timeStamp])
+  },[contextDate.timeStamp, ed])
 
 
   let options = {

@@ -1,12 +1,13 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Context from '../../Context/Context';
-import exampleExcel from '../../assets/exampleExcel.png'
+import exampleExcel from '../../assets/exampleExcel.png';
 
 function ExcelExampleModal() {
   const contextData = useContext(Context);
-  const handleClose = () =>contextData.setExampleModalOfExcel(false);
+  const handleClose = () => contextData.setExampleModalOfExcel(false);
+  
   return (
     <>
       <Modal
@@ -21,11 +22,11 @@ function ExcelExampleModal() {
           <Modal.Title>Excel File Example Image</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-            <h5>Note:</h5>
-            <ul>
-                <li>Excel file data should be like this as shown below</li>
-            </ul>
-         <img src={exampleExcel} alt="" />
+          <h5>Note:</h5>
+          <ul>
+            <li>Excel file data should be like this as shown below</li>
+          </ul>
+          <img src={exampleExcel} alt="" />
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
@@ -37,4 +38,4 @@ function ExcelExampleModal() {
   );
 }
 
-export default ExcelExampleModal
+export default ExcelExampleModal;

@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { Card } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 import hi from '../../assets/waving-hi.gif'
-import { getMailsCountAxios, getQuoteAxios, verifyTokenAxios } from '../../Services/axios'
-import { defaultToast, errorToast } from '../../Services/tostify'
+import { getMailsCountAxios, verifyTokenAxios } from '../../Services/axios'
+
 
 const Home = () => {
   const navigate= useNavigate();
@@ -16,7 +16,6 @@ const Home = () => {
       verifyTokenAxios()
       .then((res)=>{
         if(res.status === 200){
-          // defaultToast("Welcome")
           setFlag(false)
         }
       })
@@ -40,7 +39,7 @@ const Home = () => {
     .then(res => res.json())
     .then(res=>setQuote(res));
             
-    },[])
+    },[flag, navigate])
 
   return (
     <div className='d-flex justify-content-center align-items-center flex-wrap' style={{height:'80vh'}}>

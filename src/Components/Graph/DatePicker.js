@@ -1,5 +1,5 @@
 import { addDays } from 'date-fns';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import React from 'react';
 import { DateRangePicker } from 'react-date-range';
 import Context from '../../Context/Context';
