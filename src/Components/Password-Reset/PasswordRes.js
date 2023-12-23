@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { ColorRing } from 'react-loader-spinner';
 import { Link } from 'react-router-dom';
 import { passResetAxios } from '../../Services/axios';
 import { ColorRingLoading } from '../../Services/loading';

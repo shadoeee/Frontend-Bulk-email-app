@@ -24,7 +24,7 @@ const Log = () => {
         setLoading(false)
         errorToast('Error')
       })
-  },[])
+  },[contextData])
   return (
     <div  className=' logStyle container-md' >
       {loading?

@@ -81,7 +81,7 @@ const ResetPassComp = () => {
           setFlag('invalid')
         }
       })
-    },[])
+    },[string])
  
     //some style part here
     const style1 ={

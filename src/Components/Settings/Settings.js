@@ -56,7 +56,7 @@ const Settings = () => {
           }
         });
     }
-  }, []);
+  }, [flag]);
   // To save and update the credentials in database
   const handleSave = (e) => {
     setLoadButton(false);
