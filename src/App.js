@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import "./App.css";
 import Compose from "./Components/Compose/Compose";
 import Emailverify from "./Components/Emailverify/Emailverify";
@@ -17,13 +17,25 @@ import Signup from "./Components/Signup/Signup";
 
 function App() {
 
+const location = useLocation();
   const navigate = useNavigate();
 
   useEffect(() => {
     if (localStorage.getItem("x-Auth-token")) {
-      navigate("/")
+      // Redirect to home if token exists
+      if (location.pathname === "/login" || location.pathname === "/signup") {
+        navigate("/");
+      }
+    } else {
+      // Redirect to login if no token and not already on login/signup page
+      if (
+        location.pathname !== "/login" &&
+        location.pathname !== "/signup"
+      ) {
+        navigate("/login");
+      }
     }
-  }, [navigate]);
+  }, [location.pathname, navigate]);
 
   return (
     <div className="App">
