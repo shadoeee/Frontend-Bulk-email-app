@@ -29,15 +29,17 @@ function NavComp() {
           {contextData.navFlag ? (
             <>
               {" "}
-              <Container fluid>
-  <Nav className="me-auto d-flex justify-content-center nav-overlap">
-    <Nav.Link onClick={() => navigate("/")}>Home</Nav.Link>
-    <Nav.Link onClick={() => navigate("/compose")}>Compose</Nav.Link>
-    <Nav.Link onClick={() => navigate("/graph")}>Graph</Nav.Link>
-    <Nav.Link onClick={() => navigate("/log")}>Log</Nav.Link>
-    <Nav.Link onClick={() => navigate("/settings")}>Settings</Nav.Link>
-  </Nav>
-</Container>
+              <Nav className="me-auto">
+                <Nav.Link onClick={() => navigate("/")}>Home</Nav.Link>
+                <Nav.Link onClick={() => navigate("/compose")}>
+                  Compose
+                </Nav.Link>
+                <Nav.Link onClick={() => navigate("/graph")}>Graph</Nav.Link>
+                <Nav.Link onClick={() => navigate("/log")}>Log</Nav.Link>
+                <Nav.Link onClick={() => navigate("/settings")}>
+                  Settings
+                </Nav.Link>
+              </Nav>
               <button
                 type="button"
                 className="btn btn-secondary"
