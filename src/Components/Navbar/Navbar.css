@@ -1,0 +1,29 @@
+.imageStyle{
+    height: 48px;
+    padding-bottom: 12px;
+    padding-right: 10px;
+    width: 50px;
+}
+
+.navbar-brand {
+    width: 20%;
+    margin-left: -50px;
+}
+
+.nav-overlap {
+    margin-left: -50px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 576px) {
+    .App{
+        width: 100%;
+    }
+
+    .nav-overlap {
+    margin-left: 0px;
+    font-size: 16px;
+    font-weight: 500;
+}
+}
