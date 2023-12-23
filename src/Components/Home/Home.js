@@ -3,6 +3,7 @@ import { Card } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 import hi from '../../assets/waving-hi.gif'
 import { getMailsCountAxios, verifyTokenAxios } from '../../Services/axios'
+import { errorToast } from '../../Services/tostify'
 
 
 const Home = () => {
