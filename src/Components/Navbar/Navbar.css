@@ -5,7 +5,7 @@
     width: 50px;
 }
 
-.navbar-brand {
+/* .navbar-brand {
     width: 20%;
     margin-left: -50px;
 }
@@ -14,16 +14,16 @@
     margin-left: -50px;
     font-size: 20px;
     font-weight: 600;
-}
+} */
 
 @media screen and (max-width: 576px) {
     .App{
         width: 100%;
     }
 
-    .nav-overlap {
+    /* .nav-overlap {
     margin-left: 0px;
     font-size: 16px;
     font-weight: 500;
-}
+} */
 }
